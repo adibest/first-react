@@ -8,12 +8,34 @@ export default class App extends Component {
 
     return (
         <View style={styles.container}>
-          <View style={styles.v1}></View>
-          <View style={styles.v2}></View>
-          <View style={styles.v3}>
-            <View style={styles.v4}></View>
-            <View style={styles.v5}></View>
+
+          <View style={styles.wrapper}>
+            <Text style={styles.title}>
+              ini Judul
+            </Text>
+            <Text style={styles.content}>
+              hbcbdsbfeknfunf nvkdsbkg jknigln
+            </Text>
           </View>
+
+          <View style={styles.wrapper}>
+            <Text style={styles.title}>
+              ini Judul
+            </Text>
+            <Text style={styles.content}>
+              hbcbdsbfeknfunf nvkdsbkg jknigln
+            </Text>
+          </View>
+
+          <View style={styles.wrapper}>
+            <Text style={styles.title}>
+              ini Judul
+            </Text>
+            <Text style={styles.content}>
+              hbcbdsbfeknfunf nvkdsbkg jknigln
+            </Text>
+          </View>
+
         </View>
       );
   }
@@ -25,29 +47,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  v1: {
-    flex: 1,
-    backgroundColor: 'red',
-    width: '100%',
+  wrapper: {
+    marginBottom: 15,
   },
-  v2: {
-    flex: 1,
-    backgroundColor: 'green',
-    width: '100%',
+  title: {
+    fontSize: 20,
   },
-  v3: {
-    flex: 1,
-    backgroundColor: 'yellow',
-    width: '100%',
-  },
-  v4: {
-    flex: 1,
-    backgroundColor: 'aqua',
-    width: '100%',
-  },
-  v5: {
-    flex: 1,
-    backgroundColor: 'lime',
-    width: '100%',
-  },
+  content: {
+    fontSize: 11,
+  }
 })
