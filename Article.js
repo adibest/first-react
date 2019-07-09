@@ -8,10 +8,10 @@ export default class Article extends Component {
 		return(
 				<View style={styles.wrapper}>
 				  <Text style={styles.title}>
-				    ini Judul
+				    { this.props.title }
 				  </Text>
 				  <Text style={styles.content}>
-				    hbcbdsbfeknfunf nvkdsbkg jknigln
+				    { this.props.content }
 				  </Text>
 				</View>
 			);

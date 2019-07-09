@@ -11,10 +11,15 @@ export default class App extends Component {
     return (
         <View style={styles.container}>
 
-          <Article />
-          <Article />
-          <Article />
-          <Article />
+          <Article 
+            title="judul 1"
+            content="ini content"
+          />
+
+          <Article 
+            title="judul 2 "
+            content="ini content ini isinya"
+          />
 
         </View>
       );
@@ -25,6 +30,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'flex-start'
   }
 })
