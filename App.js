@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+import Article from './Article.js';
+
 export default class App extends Component {
 
 
@@ -9,32 +11,10 @@ export default class App extends Component {
     return (
         <View style={styles.container}>
 
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>
-              ini Judul
-            </Text>
-            <Text style={styles.content}>
-              hbcbdsbfeknfunf nvkdsbkg jknigln
-            </Text>
-          </View>
-
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>
-              ini Judul
-            </Text>
-            <Text style={styles.content}>
-              hbcbdsbfeknfunf nvkdsbkg jknigln
-            </Text>
-          </View>
-
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>
-              ini Judul
-            </Text>
-            <Text style={styles.content}>
-              hbcbdsbfeknfunf nvkdsbkg jknigln
-            </Text>
-          </View>
+          <Article />
+          <Article />
+          <Article />
+          <Article />
 
         </View>
       );
@@ -46,14 +26,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-  wrapper: {
-    marginBottom: 15,
-  },
-  title: {
-    fontSize: 20,
-  },
-  content: {
-    fontSize: 11,
   }
 })
