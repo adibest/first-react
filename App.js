@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
-import {View, Text, Button, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback} from 'react-native';
+import {View, Text, Button, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, TouchableWithoutFeedback} from 'react-native';
 
 export default class App extends Component {
 
   state = {
     content: 1,
+    baca: false,
   };
+
+  bacaHandle() {
+    this.setState({
+      baca: !this.state.baca
+    });
+  }
 
   touchHandle(arg) {
     let result = this.state.content + arg;
@@ -58,12 +65,29 @@ export default class App extends Component {
           <TouchableNativeFeedback
             onPress={() => this.touchHandle(2)}
           >
-            <View>
+            <View style={{
+              backgroundColor: 'yellow',
+              borderRadius: 10,
+              width: 100,
+              elevation: 5,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
               <Text>Saya text 1</Text>
               <Text>Saya text 2</Text>
               <Text>Saya text 3</Text>
             </View>
           </TouchableNativeFeedback>
+
+        {/*this is touchable without feedback*/}
+          <TouchableWithoutFeedback
+            onPress={() => this.bacaHandle()}
+            style={{marginTop: 15}}
+          >
+            <View style={{backgroundColor: this.state.baca ? 'lime' : 'aqua'}}>
+              <Text>Bismillah</Text>
+            </View>
+          </TouchableWithoutFeedback>
           
         </View>
       );
