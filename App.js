@@ -4,12 +4,14 @@ import {View, Text, Button} from 'react-native';
 export default class App extends Component {
 
   state = {
-    content: 'Adib'
+    content: 1,
   };
 
-  touchHandle() {
+  touchHandle(arg) {
+    let result = this.state.content + arg;
+
     this.setState({
-      content: 'Bida'
+      content: result,
     });
   }
  
@@ -24,8 +26,16 @@ export default class App extends Component {
         >
           <Text> {this.state.content} </Text>
           <Button
-            title="Ubah State"
-            onPress={ () => this.touchHandle() }
+            title="Tambah 1"
+            onPress={ () => this.touchHandle(1) }
+          />
+          <Button
+            title="Tambah 2"
+            onPress={ () => this.touchHandle(2) }
+          />
+          <Button
+            title="Tambah 3"
+            onPress={ () => this.touchHandle(3) }
           />
         </View>
       );
