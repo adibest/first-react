@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, FlatList} from 'react-native';
 
 let todos = [
   {
@@ -27,7 +27,7 @@ export default class App extends React.Component {
             alignItems: 'center',
           }}
         >
-          
+          {/*perulangan map*/}
           {todos.map( (todo, index) => (
             
             <View key={index}>
@@ -36,6 +36,27 @@ export default class App extends React.Component {
               <Text>{todo.desc}</Text>
             </View>
           ) )}
+
+          <View style={{
+            margin: 15,
+            width: '100%',
+            borderWidth: 1,
+            borderColor: 'black',
+          }} />
+
+        {/*perulangan flatlist*/}
+        <FlatList
+          data={todos}
+          keyExtractor={ (todo,index) => index.toString()}
+          renderItem={ (todo) => (
+
+            <View>
+              <Text>{ todo.item.title }</Text>
+              <Text>{ todo.item.desc }</Text>
+            </View>
+
+          )}
+        />
 
         </View>
     );
